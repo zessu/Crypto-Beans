@@ -1,9 +1,17 @@
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
+import { Crypto } from '../app/types/crpyto';
+
+
+const constructUrl = (url: string, currency: string) => {
+  return `https://min-api.cryptocompare.com/data/pricemulti?fsyms=${url}&tsyms=${currency}&api_key=${environment.apiKey}`
+}
 
 export const environment = {
-  production: false
+  production: false,
+  apiKey: 'eb69a41495871dafd40fc4094ed84d14bd219fbc0dcffc9923813e2f69f0c2f1', // LOLZZ XOXO :P
+  apiUrl: constructUrl
 };
 
 /*
