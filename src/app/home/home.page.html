@@ -1,34 +1,35 @@
-<ion-header>
-  <ion-toolbar color="primary">
-    <ion-title>
-      Crypto Beans
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+          Crypto Beans
+        </ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-list-header>
+          <ion-label>Market Cap
+            <ion-icon name="refresh"></ion-icon>
+          </ion-label>
+        </ion-list-header>
+        <ion-item *ngFor="let coin of supportedCurrencies; let i = index ">
+          <ion-text color="medium">{{i + 1}}</ion-text>
+          <ion-img src="assets/images/{{coin.name | lowercase }}.png" alt="Bitcoin SVG"></ion-img>
+          <ion-label>{{coin.name | uppercasefirst }}</ion-label>
+          <span> ${{ coin.price }} </span>
+        </ion-item>
+      </ion-list>
+    </ion-content>
 
-<ion-content>
-
-  <ion-list>
-    <ion-list-header>
-      <ion-label>Market Cap
-        <ion-icon name="refresh"></ion-icon>
-      </ion-label>
-    </ion-list-header>
-    <ion-item *ngFor="let coin of supportedCurrencies; let i = index ">
-      <ion-text color="medium">{{i + 1}}</ion-text>
-      <ion-img src="assets/images/{{coin.name | lowercase }}.png" alt="Bitcoin SVG"></ion-img>
-      <ion-label>{{coin.name | uppercasefirst }}</ion-label>
-      <span> ${{ coin.price }} </span>
-    </ion-item>
-  </ion-list>
-</ion-content>
-
-<ion-footer>
-  <ion-item>
-    <ion-label>Select Currency</ion-label>
-    <ion-select>
-      <ion-select-option value="USD">United States ($)</ion-select-option>
-      <ion-select-option value="KSHS">Kenya Shillings (KSHS)</ion-select-option>
-    </ion-select>
-  </ion-item>
-</ion-footer>
+    <ion-footer>
+      <ion-item>
+        <ion-label>Select Currency</ion-label>
+        <ion-select>
+          <ion-select-option value="USD">United States ($)</ion-select-option>
+          <ion-select-option value="KSHS">Kenya Shillings (KSHS)</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-footer>

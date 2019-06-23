@@ -10,7 +10,7 @@ const constructUrl = (url: string, currency: string) => {
 
 export const environment = {
   production: false,
-  apiKey: 'eb69a41495871dafd40fc4094ed84d14bd219fbc0dcffc9923813e2f69f0c2f1', // LOLZZ XOXO :P
+  apiKey: 'eb69a41495871dafd40fc4094ed84d14bd219fbc0dcffc9923813e2f69f0c2f1', // LOLZZ XOXO :P, free API key, please use your own as I havent figured out how to use this without a BFF
   apiUrl: constructUrl
 };
 
