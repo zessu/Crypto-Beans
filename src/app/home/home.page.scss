@@ -11,3 +11,26 @@ ion-text {
 ion-img {
   margin-right: 5px;
 }
+
+ion-title {
+
+  div {
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+    padding: 0px;
+    align-items: center;
+
+    span#logo-text {
+      margin-right: 5px;
+    }
+
+    span#logo {
+
+      img {
+        height: 40px;
+        width: 40px
+      }
+    }
+  }
+}

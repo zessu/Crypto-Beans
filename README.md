@@ -1,8 +1,8 @@
 <img src="src/assets/images/crypto beans.PNG" />
 
-# Crpyto Beans
+# Crypto Beans
 
-## Welcome to Crypto Beans, and Android, IOS, Web and Desktop application that will enable you to 
+## Welcome to Crypto Beans, an Android, IOS, Web and Desktop application that will enable you to 
 
 1. Set price alerts 
 

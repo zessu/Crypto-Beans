@@ -4,7 +4,12 @@
           <ion-menu-button></ion-menu-button>
         </ion-buttons>
         <ion-title>
-          Crypto Beans
+          <div>
+            <span id="logo-text">Crypto Beans</span>
+            <span id="logo">
+              <img src="../../assets/images/beans.png" alt="logo" />
+            </span>
+          </div>
         </ion-title>
       </ion-toolbar>
     </ion-header>
@@ -12,15 +17,21 @@
       <ion-list>
         <ion-list-header>
           <ion-label>Market Cap
-            <ion-icon name="refresh"></ion-icon>
+            <ion-icon name=" refresh">
+            </ion-icon>
           </ion-label>
         </ion-list-header>
         <ion-item *ngFor="let coin of supportedCurrencies; let i = index ">
           <ion-text color="medium">{{i + 1}}</ion-text>
-          <ion-img src="assets/images/{{coin.name | lowercase }}.png" alt="Bitcoin SVG"></ion-img>
-          <ion-label>{{coin.name | uppercasefirst }}</ion-label>
-          <span> ${{ coin.price }} </span>
+          <ion-img src="assets/images/{{coin.name | lowercase }}.png" alt="Crypto Currency SVG"></ion-img>
+          <ion-label color="medium">{{coin.name | uppercasefirst }}</ion-label>
+          <span>
+            <ion-text color="medium">${{ coin.price }}</ion-text>
+          </span>
         </ion-item>
+        <ion-button color="secondary">
+          <ion-icon name="add"></ion-icon>
+        </ion-button>
       </ion-list>
     </ion-content>
 
